@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ps" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>پښتو ټایپ تمرین</title>
+  <style>
+    body {
+      font-family: "Noto Naskh Arabic", serif;
+      background-color: #f5f5f5;
+      text-align: center;
+      padding: 40px;
+    }
+    #sentence {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    #input {
+      font-size: 22px;
+      padding: 10px;
+      width: 80%;
+      direction: rtl;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>پښتو ټایپ تمرین</h1>
+  <div id="sentence">زه پښتو ژبه زده کوم</div>
+  <input id="input" type="text" placeholder="دلته ولیکه..." />
+  <div id="result"></div>
+
+  <script>
+    const sentence = document.getElementById("sentence").innerText;
+    const input = document.getElementById("input");
+    const result = document.getElementById("result");
+
+    input.addEventListener("input", () => {
+      if (input.value === sentence) {
+        result.innerText = "✅ سم ټایپ مو وکړ!";
+      } else {
+        result.innerText = "❌ لا هم سم ندی.";
+      }
+    });
+  </script>
+</body>
+</html>
